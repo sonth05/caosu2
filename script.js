@@ -130,25 +130,33 @@ if (contactForm) {
     });
 }
 
-// Product image lazy loading
+// Product image lazy loading + fade-in safety for cached images
 const productImages = document.querySelectorAll('.product-image img');
 const imageObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const img = entry.target;
+        if (!entry.isIntersecting) return;
+
+        const img = entry.target;
+        img.style.transition = 'opacity 0.3s ease';
+
+        // If the image is already loaded (from cache), reveal immediately
+        if (img.complete && img.naturalWidth > 0) {
+            img.style.opacity = '1';
+        } else {
+            // Otherwise, start hidden and fade in on load (once)
             img.style.opacity = '0';
-            img.style.transition = 'opacity 0.3s ease';
-            
-            img.onload = () => {
+            img.addEventListener('load', () => {
                 img.style.opacity = '1';
-            };
-            
-            imageObserver.unobserve(img);
+            }, { once: true });
         }
+
+        imageObserver.unobserve(img);
     });
 });
 
 productImages.forEach(img => {
+    // Hint the browser to lazy-load natively as well
+    img.setAttribute('loading', 'lazy');
     imageObserver.observe(img);
 });
 
@@ -187,15 +195,15 @@ if (statsSection) {
     statsObserver.observe(statsSection);
 }
 
-// Parallax effect for hero section
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
-    const heroImage = document.querySelector('.hero-image img');
+    const heroImage = document.querySelector('.hero-background img');
     
     if (heroImage && scrolled < window.innerHeight) {
         heroImage.style.transform = `translateY(${scrolled * 0.5}px)`;
     }
 });
+
 
 // Add loading animation
 window.addEventListener('load', () => {
@@ -208,7 +216,10 @@ document.querySelectorAll('img').forEach(img => {
         console.warn('Image failed to load:', e.target.src);
         e.target.style.background = '#f8f9fa';
         e.target.style.border = '2px dashed #dee2e6';
-        e.target.style.position = 'relative';
+        // ensure parent is the positioning context for overlay text
+        if (e.target.parentElement) {
+            e.target.parentElement.style.position = 'relative';
+        }
         
         // Add error text
         const errorText = document.createElement('div');

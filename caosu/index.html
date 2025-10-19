@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viet Dong International Trading Co., Ltd</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>VIET DONG</h2>
+                    <span>International Trading Co., Ltd</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#markets">Markets</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <img src="asset/乳胶 latex (2).png" alt="Natural Rubber">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1>Reputable Natural Rubber Exporter</h1>
+            <p>Providing diverse high-quality rubber products for domestic and international markets</p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn btn-primary">View Products</a>
+                <a href="#contact" class="btn btn-secondary">Contact Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Us</h2>
+                <p>Viet Dong International Trading Co., Ltd</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>We are honored to introduce you to some information about our company — Viet Dong International Trading Co., Ltd.</p>
+                    
+                    <p>Currently, VIET DONG is promoting the production and export of various types of natural rubber, including: HA latex, RSS1, RSS3, SVR 10, SVR 20, SVR 3L and ungraded rubber.</p>
+                    
+                    <p>Since its establishment, VIET DONG has continuously operated and developed in the field of export, production and related processing. As one of Vietnam's reputable natural rubber exporters.</p>
+                </div>
+                
+                <!-- Video Section -->
+                <div class="about-videos">
+                    <div class="videos-grid">
+                        <div class="video-item">
+                            <video controls poster="asset/SVR 3L.jpg">
+                                <source src="asset/SVR 3L.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-info">
+                                <h4>SVR 3L Production</h4>
+                                <p>SVR 3L rubber production process</p>
+                            </div>
+                        </div>
+                        <div class="video-item">
+                            <video controls poster="asset/svr 20.png">
+                                <source src="asset/svr 20.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-info">
+                                <h4>SVR 20 Production</h4>
+                                <p>SVR 20 rubber production process</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <h3>15+</h3>
+                        <p>Years of Experience</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>10+</h3>
+                        <p>Partner Countries</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>7+</h3>
+                        <p>Product Types</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Products</h2>
+                <p>Diverse high-quality natural rubber products</p>
+            </div>
+            
+            <!-- Product Categories -->
+            <div class="product-categories">
+                <div class="category-tabs">
+                    <button class="tab-btn active" data-category="latex">Latex</button>
+                    <button class="tab-btn" data-category="rss">RSS</button>
+                    <button class="tab-btn" data-category="svr">SVR</button>
+                    <button class="tab-btn" data-category="cv">CV Series</button>
+                    <button class="tab-btn" data-category="other">Others</button>
+                </div>
+            </div>
+
+            <!-- Latex Products -->
+            <div class="product-grid active" id="latex">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/natural_latex.png" alt="Natural Latex">
+                    </div>
+                    <div class="product-info">
+                        <h3>Natural Latex</h3>
+                        <p>High-quality natural latex rubber</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/ha_latex.png" alt="HA Latex">
+                    </div>
+                    <div class="product-info">
+                        <h3>HA Latex</h3>
+                        <p>Highest quality HA latex rubber</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/premium_latex.png" alt="Premium Latex">
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Latex</h3>
+                        <p>Premium latex for special applications</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RSS Products -->
+            <div class="product-grid" id="rss">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/rss1.jpg" alt="RSS1">
+                    </div>
+                    <div class="product-info">
+                        <h3>RSS1</h3>
+                        <p>RSS type 1 rubber, highest quality</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/rss1 (2).jpg" alt="RSS1 Premium">
+                    </div>
+                    <div class="product-info">
+                        <h3>RSS1 Premium</h3>
+                        <p>Premium RSS1 rubber</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/RSS3.jpg" alt="RSS3">
+                    </div>
+                    <div class="product-info">
+                        <h3>RSS3</h3>
+                        <p>RSS type 3 rubber, good quality</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/RSS3 (1).png" alt="RSS3 Premium">
+                    </div>
+                    <div class="product-info">
+                        <h3>RSS3 Premium</h3>
+                        <p>Premium RSS3 rubber</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/rss.jpeg" alt="RSS">
+                    </div>
+                    <div class="product-info">
+                        <h3>RSS</h3>
+                        <p>Various RSS rubber types</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/rss (1).jpeg" alt="RSS Standard">
+                    </div>
+                    <div class="product-info">
+                        <h3>RSS Standard</h3>
+                        <p>Standard RSS rubber</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SVR Products -->
+            <div class="product-grid" id="svr">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/svr 10.png" alt="SVR 10">
+                    </div>
+                    <div class="product-info">
+                        <h3>SVR 10</h3>
+                        <p>SVR type 10 rubber, high quality</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/svr 10 (1).png" alt="SVR 10 Premium">
+                    </div>
+                    <div class="product-info">
+                        <h3>SVR 10 Premium</h3>
+                        <p>Premium SVR 10 rubber</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/svr 20.png" alt="SVR 20">
+                    </div>
+                    <div class="product-info">
+                        <h3>SVR 20</h3>
+                        <p>SVR type 20 rubber, good quality</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/svr 20 (1).png" alt="SVR 20 Premium">
+                    </div>
+                    <div class="product-info">
+                        <h3>SVR 20 Premium</h3>
+                        <p>Premium SVR 20 rubber</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/svr 20 (3).png" alt="SVR 20 Special">
+                    </div>
+                    <div class="product-info">
+                        <h3>SVR 20 Special</h3>
+                        <p>Special SVR 20 rubber</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/svr 20 (4).png" alt="SVR 20 Elite">
+                    </div>
+                    <div class="product-info">
+                        <h3>SVR 20 Elite</h3>
+                        <p>Elite SVR 20 rubber</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/SVR 20 （5）.png" alt="SVR 20 Ultra">
+                    </div>
+                    <div class="product-info">
+                        <h3>SVR 20 Ultra</h3>
+                        <p>Ultra SVR 20 rubber</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/SVR 3L.jpg" alt="SVR 3L">
+                    </div>
+                    <div class="product-info">
+                        <h3>SVR 3L</h3>
+                        <p>SVR type 3L rubber, high quality</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/SVR 3L (1).png" alt="SVR 3L Premium">
+                    </div>
+                    <div class="product-info">
+                        <h3>SVR 3L Premium</h3>
+                        <p>Premium SVR 3L rubber</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/svr 3L (2).jpg" alt="SVR 3L Special">
+                    </div>
+                    <div class="product-info">
+                        <h3>SVR 3L Special</h3>
+                        <p>Special SVR 3L rubber</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/SVR 3L (3).png" alt="SVR 3L Elite">
+                    </div>
+                    <div class="product-info">
+                        <h3>SVR 3L Elite</h3>
+                        <p>Elite SVR 3L rubber</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/SVR 3L (4).jpg" alt="SVR 3L Ultra">
+                    </div>
+                    <div class="product-info">
+                        <h3>SVR 3L Ultra</h3>
+                        <p>Ultra SVR 3L rubber</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/SVR 3L （6）.png" alt="SVR 3L Master">
+                    </div>
+                    <div class="product-info">
+                        <h3>SVR 3L Master</h3>
+                        <p>Master SVR 3L rubber</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/svr 5.jpg" alt="SVR 5">
+                    </div>
+                    <div class="product-info">
+                        <h3>SVR 5</h3>
+                        <p>SVR type 5 rubber</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/svr10.jpg" alt="SVR 10">
+                    </div>
+                    <div class="product-info">
+                        <h3>SVR 10</h3>
+                        <p>Standard SVR 10 rubber</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/svr10 （1）.jpg" alt="SVR 10 Premium">
+                    </div>
+                    <div class="product-info">
+                        <h3>SVR 10 Premium</h3>
+                        <p>Premium SVR 10 rubber</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/svr 10, 20.jpg" alt="SVR 10 & 20">
+                    </div>
+                    <div class="product-info">
+                        <h3>SVR 10 & 20</h3>
+                        <p>SVR 10 & 20 Collection</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/Rubber SVR.jpg" alt="Rubber SVR">
+                    </div>
+                    <div class="product-info">
+                        <h3>Rubber SVR</h3>
+                        <p>Comprehensive SVR rubber</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/SVR L.jpg" alt="SVR L">
+                    </div>
+                    <div class="product-info">
+                        <h3>SVR L</h3>
+                        <p>High-quality SVR L rubber</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CV Series Products -->
+            <div class="product-grid" id="cv">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/SVR 10CV.png" alt="SVR 10CV">
+                    </div>
+                    <div class="product-info">
+                        <h3>SVR 10CV</h3>
+                        <p>High-quality SVR 10CV rubber</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/SVR 10CV60.jpg" alt="SVR 10CV60">
+                    </div>
+                    <div class="product-info">
+                        <h3>SVR 10CV60</h3>
+                        <p>Premium SVR 10CV60 rubber</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/SVR 10CV60 (1).jpg" alt="SVR 10CV60 Premium">
+                    </div>
+                    <div class="product-info">
+                        <h3>SVR 10CV60 Premium</h3>
+                        <p>Ultimate SVR 10CV60 rubber</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/SVR CV50.jpg" alt="SVR CV50">
+                    </div>
+                    <div class="product-info">
+                        <h3>SVR CV50</h3>
+                        <p>High-quality SVR CV50 rubber</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/SVR CV60.jpg" alt="SVR CV60">
+                    </div>
+                    <div class="product-info">
+                        <h3>SVR CV60</h3>
+                        <p>High-quality SVR CV60 rubber</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/SVR CV60 (1).png" alt="SVR CV60 Premium">
+                    </div>
+                    <div class="product-info">
+                        <h3>SVR CV60 Premium</h3>
+                        <p>Premium SVR CV60 rubber</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Products -->
+            <div class="product-grid" id="other">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/ungraded_rubber.png" alt="Ungraded Rubber">
+                    </div>
+                    <div class="product-info">
+                        <h3>Ungraded Rubber</h3>
+                        <p>Ungraded rubber for diverse applications</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/杯块 (1).png" alt="Cao su đặc biệt">
+                    </div>
+                    <div class="product-info">
+                        <h3>Cao su đặc biệt</h3>
+                        <p>Special rubber types as requested</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/杯块 （2）.png" alt="Cao su Premium">
+                    </div>
+                    <div class="product-info">
+                        <h3>Cao su Premium</h3>
+                        <p>Premium rubber for special applications</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/杯块 （3）.png" alt="Cao su Elite">
+                    </div>
+                    <div class="product-info">
+                        <h3>Cao su Elite</h3>
+                        <p>Ultimate premium rubber</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/杯块 （4）.png" alt="Cao su Ultra">
+                    </div>
+                    <div class="product-info">
+                        <h3>Cao su Ultra</h3>
+                        <p>Ultra premium rubber</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="asset/N10.png" alt="N10">
+                    </div>
+                    <div class="product-info">
+                        <h3>N10</h3>
+                        <p>High-quality N10 rubber</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications Section -->
+    <section class="applications">
+        <div class="container">
+            <div class="section-header">
+                <h2>Applications</h2>
+                <p>Natural rubber is applied in various industries</p>
+            </div>
+            <div class="applications-grid">
+                <div class="app-item">
+                    <i class="fas fa-car"></i>
+                    <h3>Tires</h3>
+                    <p>Automotive and motorcycle tire production</p>
+                </div>
+                <div class="app-item">
+                    <i class="fas fa-conveyor-belt"></i>
+                    <h3>Conveyor Belts</h3>
+                    <p>Industrial conveyor belts</p>
+                </div>
+                <div class="app-item">
+                    <i class="fas fa-running"></i>
+                    <h3>Athletic Shoes</h3>
+                    <p>Premium athletic shoe soles</p>
+                </div>
+                <div class="app-item">
+                    <i class="fas fa-hand-paper"></i>
+                    <h3>Gloves</h3>
+                    <p>Medical and industrial gloves</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Markets Section -->
+    <section id="markets" class="markets">
+        <div class="container">
+            <div class="section-header">
+                <h2>Export Markets</h2>
+                <p>We have established long-term and stable business partnerships</p>
+            </div>
+            <div class="markets-grid">
+                <div class="market-item">
+                    <img src="https://flagcdn.com/w40/eg.png" alt="Egypt">
+                    <h3>Egypt</h3>
+                </div>
+                <div class="market-item">
+                    <img src="https://flagcdn.com/w40/tr.png" alt="Turkey">
+                    <h3>Turkey</h3>
+                </div>
+                <div class="market-item">
+                    <img src="https://flagcdn.com/w40/pk.png" alt="Pakistan">
+                    <h3>Pakistan</h3>
+                </div>
+                <div class="market-item">
+                    <img src="https://flagcdn.com/w40/es.png" alt="Spain">
+                    <h3>Spain</h3>
+                </div>
+                <div class="market-item">
+                    <img src="https://flagcdn.com/w40/de.png" alt="Germany">
+                    <h3>Germany</h3>
+                </div>
+                <div class="market-item">
+                    <img src="https://flagcdn.com/w40/ru.png" alt="Russia">
+                    <h3>Russia</h3>
+                </div>
+                <div class="market-item">
+                    <img src="https://flagcdn.com/w40/ro.png" alt="Romania">
+                    <h3>Romania</h3>
+                </div>
+                <div class="market-item">
+                    <img src="https://flagcdn.com/w40/kr.png" alt="South Korea">
+                    <h3>South Korea</h3>
+                </div>
+                <div class="market-item">
+                    <img src="https://flagcdn.com/w40/my.png" alt="Malaysia">
+                    <h3>Malaysia</h3>
+                </div>
+                <div class="market-item">
+                    <img src="https://flagcdn.com/w40/cn.png" alt="China">
+                    <h3>China</h3>
+                </div>
+                <div class="market-item">
+                    <img src="https://flagcdn.com/w40/ar.png" alt="Argentina">
+                    <h3>Argentina</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>We are always ready to support and advise our customers</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-building"></i>
+                        <div>
+                            <h3>Address</h3>
+                            <p>15th Floor, Block B, Song Da Building<br>
+                            Pham Hung Street, Tu Liem Ward<br>
+                            Hanoi City, Vietnam</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>(+84) ................................</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <div>
+                            <h3>Mobile</h3>
+                            <p>(+84) ................................</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-comments"></i>
+                        <div>
+                            <h3>Messaging</h3>
+                            <p>Telegram / Viber / Whatsapp<br>(+84) ................................</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>VIET DONG</h3>
+                    <p>Viet Dong International Trading Co., Ltd</p>
+                    <p>Reputable natural rubber exporter from Vietnam</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Products</h3>
+                    <ul>
+                        <li>HA Latex</li>
+                        <li>RSS1, RSS3</li>
+                        <li>SVR 10, SVR 20, SVR 3L</li>
+                        <li>Ungraded Rubber</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 15th Floor, Block B, Song Da Building</p>
+                    <p><i class="fas fa-phone"></i> (+84) ................................</p>
+                    <p><i class="fas fa-envelope"></i> info@vietdong.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Viet Dong International Trading Co., Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

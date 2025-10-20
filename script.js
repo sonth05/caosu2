@@ -214,7 +214,7 @@ window.addEventListener('load', () => {
 // Note: Browsers can't read the server filesystem, so we provide the actual filenames
 // found in the project's SVR/ directory. Update this array if you add/remove files.
 (() => {
-    // map actual filenames => display title and description (user requested exact names)
+    // Map actual filenames (from SVR/) to the exact display titles the user requested
     const svrFiles = [
         { file: 'svr10 （1）.jpg', title: 'SVR 10', desc: 'SVR 10 rubber' },
         { file: 'SVR 20.jpg', title: 'SVR 20', desc: 'SVR 20 rubber' },
@@ -230,26 +230,26 @@ window.addEventListener('load', () => {
     // Remove any existing hardcoded cards inside #svr to avoid duplicates
     svrGrid.innerHTML = '';
 
-    svrFiles.forEach(entry => {
+    svrFiles.forEach(item => {
         const card = document.createElement('div');
         card.className = 'product-card';
 
         const imgWrap = document.createElement('div');
         imgWrap.className = 'product-image';
 
-    const img = document.createElement('img');
-    img.src = `SVR/${encodeURI(entry.file)}`;
-    img.alt = entry.title;
+        const img = document.createElement('img');
+        img.src = `SVR/${encodeURI(item.file)}`;
+        img.alt = item.title;
         img.loading = 'lazy';
 
         imgWrap.appendChild(img);
 
         const info = document.createElement('div');
         info.className = 'product-info';
-    const h3 = document.createElement('h3');
-    h3.textContent = entry.title;
-    const p = document.createElement('p');
-    p.textContent = entry.desc;
+        const h3 = document.createElement('h3');
+        h3.textContent = item.title;
+        const p = document.createElement('p');
+        p.textContent = item.desc;
 
         info.appendChild(h3);
         info.appendChild(p);

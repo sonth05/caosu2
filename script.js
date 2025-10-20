@@ -214,13 +214,14 @@ window.addEventListener('load', () => {
 // Note: Browsers can't read the server filesystem, so we provide the actual filenames
 // found in the project's SVR/ directory. Update this array if you add/remove files.
 (() => {
+    // map actual filenames => display title and description (user requested exact names)
     const svrFiles = [
-        'svr10 （1）.jpg',
-        'SVR 20.jpg',
-        'svr 3L .png',
-        'svr 5.jpg',
-        'svr cv 50.jpg',
-        'svr cv 60.jpg'
+        { file: 'svr10 （1）.jpg', title: 'SVR 10', desc: 'SVR 10 rubber' },
+        { file: 'SVR 20.jpg', title: 'SVR 20', desc: 'SVR 20 rubber' },
+        { file: 'svr 3L .png', title: 'SVR 3L', desc: 'SVR 3L rubber' },
+        { file: 'svr 5.jpg', title: 'SVR 5L', desc: 'SVR 5L rubber' },
+        { file: 'svr cv 50.jpg', title: 'SVR CV50', desc: 'SVR CV50 rubber' },
+        { file: 'svr cv 60.jpg', title: 'SVR CV60', desc: 'SVR CV60 rubber' }
     ];
 
     const svrGrid = document.querySelector('#svr');
@@ -229,26 +230,26 @@ window.addEventListener('load', () => {
     // Remove any existing hardcoded cards inside #svr to avoid duplicates
     svrGrid.innerHTML = '';
 
-    svrFiles.forEach(filename => {
+    svrFiles.forEach(entry => {
         const card = document.createElement('div');
         card.className = 'product-card';
 
         const imgWrap = document.createElement('div');
         imgWrap.className = 'product-image';
 
-        const img = document.createElement('img');
-        img.src = `SVR/${encodeURI(filename)}`;
-        img.alt = filename.replace(/\.[^.]+$/, '');
+    const img = document.createElement('img');
+    img.src = `SVR/${encodeURI(entry.file)}`;
+    img.alt = entry.title;
         img.loading = 'lazy';
 
         imgWrap.appendChild(img);
 
         const info = document.createElement('div');
         info.className = 'product-info';
-        const h3 = document.createElement('h3');
-        h3.textContent = img.alt;
-        const p = document.createElement('p');
-        p.textContent = img.alt + ' rubber';
+    const h3 = document.createElement('h3');
+    h3.textContent = entry.title;
+    const p = document.createElement('p');
+    p.textContent = entry.desc;
 
         info.appendChild(h3);
         info.appendChild(p);

@@ -210,6 +210,68 @@ window.addEventListener('load', () => {
     document.body.classList.add('loaded');
 });
 
+// Dynamically populate the SVR product grid using filenames from the SVR/ folder
+// Note: Browsers can't read the server filesystem, so we provide the actual filenames
+// found in the project's SVR/ directory. Update this array if you add/remove files.
+(() => {
+    const svrFiles = [
+        'svr10 （1）.jpg',
+        'SVR 20.jpg',
+        'svr 3L .png',
+        'svr 5.jpg',
+        'svr cv 50.jpg',
+        'svr cv 60.jpg'
+    ];
+
+    const svrGrid = document.querySelector('#svr');
+    if (!svrGrid) return;
+
+    // Remove any existing hardcoded cards inside #svr to avoid duplicates
+    svrGrid.innerHTML = '';
+
+    svrFiles.forEach(filename => {
+        const card = document.createElement('div');
+        card.className = 'product-card';
+
+        const imgWrap = document.createElement('div');
+        imgWrap.className = 'product-image';
+
+        const img = document.createElement('img');
+        img.src = `SVR/${encodeURI(filename)}`;
+        img.alt = filename.replace(/\.[^.]+$/, '');
+        img.loading = 'lazy';
+
+        imgWrap.appendChild(img);
+
+        const info = document.createElement('div');
+        info.className = 'product-info';
+        const h3 = document.createElement('h3');
+        h3.textContent = img.alt;
+        const p = document.createElement('p');
+        p.textContent = img.alt + ' rubber';
+
+        info.appendChild(h3);
+        info.appendChild(p);
+
+        card.appendChild(imgWrap);
+        card.appendChild(info);
+
+        svrGrid.appendChild(card);
+    });
+
+    // Re-run image observer and product animations on newly created nodes
+    const newProductImages = document.querySelectorAll('.product-image img');
+    newProductImages.forEach(img => {
+        img.setAttribute('loading', 'lazy');
+        imageObserver.observe(img);
+    });
+
+    document.querySelectorAll('.product-card').forEach(el => {
+        observer.observe(el);
+    });
+
+})();
+
 // Error handling for images
 document.querySelectorAll('img').forEach(img => {
     img.addEventListener('error', (e) => {
